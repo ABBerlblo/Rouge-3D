@@ -493,6 +493,10 @@ PrefabInstance:
       value: FirstPersonPlayer
       objectReference: {fileID: 0}
     - target: {fileID: 143738040093733657, guid: 8adee39518b0e22479919fde3c913899, type: 3}
+      propertyPath: jumpHeight
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 143738040093733657, guid: 8adee39518b0e22479919fde3c913899, type: 3}
       propertyPath: groundMask.m_Bits
       value: 264
       objectReference: {fileID: 0}
@@ -605,7 +609,7 @@ NavMeshAgent:
   m_Acceleration: 12
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 2
+  m_StoppingDistance: 3
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
