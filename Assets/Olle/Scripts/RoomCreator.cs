@@ -31,7 +31,7 @@ public class RoomCreator : MonoBehaviour
                 Vector3 doorPosition = transform.position + Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x, exitDoor[i].y, exitDoor[i].z);
 
                 //kör bara koden under om det inte finns något där
-                Debug.DrawRay(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), Color.red, 1000); //test ray                    FIX!!!!! *9 is lazy and makes it shoot wrong
+                //Debug.DrawRay(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), Color.red, 1000); //test ray                    FIX!!!!! *9 is lazy and makes it shoot wrong
                 if (!Physics.Raycast(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), 1))
                 {
 
@@ -41,18 +41,18 @@ public class RoomCreator : MonoBehaviour
                     int[] doorsAndWalls = new int[3] { 0, 0, 0 };
                     for (int k = 90; k <= 270; k += 90)
                     {
-                        Vector3 checkPosition = doorPosition - Quaternion.AngleAxis(exitDoor[i].w + transform.eulerAngles.y - 180, Vector3.up) * new Vector3(2.5f,1,0);
-                        Vector3 checkDoorPosition = checkPosition + Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f, 1, 0);
+                        Vector3 checkPosition = doorPosition - Quaternion.AngleAxis(exitDoor[i].w + transform.eulerAngles.y - 180, Vector3.up) * new Vector3(2.5f * 5,1,0); //Fixade scalen
+                        Vector3 checkDoorPosition = checkPosition + Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f * 5, 1, 0);
 
-                        Debug.DrawRay(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f, 1, 0)) + new Vector3(0, -0.3f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), Color.yellow, 1000); //test ray
-                        Debug.DrawRay(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f, 1, 0)) + new Vector3(0, -0.5f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), Color.yellow, 1000); //test ray
+                        //Debug.DrawRay(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f * 5, 1, 0)) + new Vector3(0, -0.3f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), Color.yellow, 1000); //test ray
+                        //Debug.DrawRay(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f * 5, 1, 0)) + new Vector3(0, -0.5f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), Color.yellow, 1000); //test ray
 
-                        if (Physics.Raycast(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f, 1, 0)) + new Vector3(0, -0.3f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), 3))
+                        if (Physics.Raycast(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f * 5, 1, 0)) + new Vector3(0, -0.3f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), 3))
                         {
                             doorsAndWalls[(k / 90) - 1] = 2;//wall
                             //print(new string("WALL HIT!! roomOrder:" + roomOrder + " ExitDoor:" + i + " Direction:" + k));
                         }
-                        else if (Physics.Raycast(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f, 1, 0)) + new Vector3(0, -0.5f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), 3))
+                        else if (Physics.Raycast(checkDoorPosition - 0.1f * (Quaternion.AngleAxis(transform.eulerAngles.y + k + exitDoor[i].w - 180, Vector3.up) * new Vector3(2.5f * 5, 1, 0)) + new Vector3(0, -0.5f, 0), checkDoorPosition - checkPosition + new Vector3(0, -1f, 0), 3))
                         {
                             doorsAndWalls[(k / 90) - 1] = 1;//door
                             //print(new string("DOOR HIT!! roomOrder:" + roomOrder + " ExitDoor:" + i + " Direction:" + k));
