@@ -58,12 +58,4 @@ public class PlayerStats: MonoBehaviour
         coin.text = "Coin: " + amountOfCoins.ToString();
         healthbar.text = "Health: " + health.ToString() + "/" + maxHealth.ToString();
     }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (other.gameObject.CompareTag("Hit"))
-        {
-            health = health - attackDmg;
-        }
-    }
 }

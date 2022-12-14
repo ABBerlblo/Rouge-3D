@@ -197,5 +197,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b62d63e433070e14ca48c373feb510c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitPoints: 0
-  attackPoints: 0
+  enemyMoveScript: {fileID: 1512776292643893960}
+  hitPoints: 100
+  attackPoints: 20
+  enemyDmg: 20
