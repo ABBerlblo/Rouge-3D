@@ -193,7 +193,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 25e811c9f39b0354fa6da35c67c64125, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mouseSensetivity: 100
+  mouseSensetivity: 200
   playerBody: {fileID: 143738040093733659}
 --- !u!1 &143738039487644590
 GameObject:
@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 143738040093733659}
   - component: {fileID: 143738040093733658}
   - component: {fileID: 143738040093733657}
+  - component: {fileID: 2152328645031132003}
   m_Layer: 0
   m_Name: FirstPersonPlayer
   m_TagString: Untagged
@@ -418,7 +419,25 @@ MonoBehaviour:
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
-    m_Bits: 8
+    m_Bits: 264
+--- !u!114 &2152328645031132003
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 143738040093733656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f1eaec44671ce6419e8502975603fd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthbar: {fileID: 0}
+  coin: {fileID: 0}
+  health: 100
+  amountOfCoins: 100
+  attackDmg: 0
+  increaseCoinsAmount: 0
 --- !u!1 &143738040417115371
 GameObject:
   m_ObjectHideFlags: 0
