@@ -31,8 +31,8 @@ public class RoomCreator : MonoBehaviour
                 Vector3 doorPosition = transform.position + Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x, exitDoor[i].y, exitDoor[i].z);
 
                 //kör bara koden under om det inte finns något där
-                //Debug.DrawRay(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), Color.red, 1000); //test ray                    FIX!!!!! *9 is lazy and makes it shoot wrong
-                if (!Physics.Raycast(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), 1))
+                Debug.DrawRay(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), Color.red, 1000); //test ray                    FIX!!!!! *9 is lazy and makes it shoot wrong
+                if (!Physics.Raycast(doorPosition - Quaternion.AngleAxis(transform.eulerAngles.y, Vector3.up) * new Vector3(exitDoor[i].x * 0.1f, 0, exitDoor[i].z * 0.1f) + new Vector3(0, -0.6f, 0), doorPosition - transform.position + new Vector3(0, -1f, 0), 3))
                 {
 
                     //gör en lista med rum som kan generera, om listan är tom skapa ett passande connector rum
@@ -166,10 +166,6 @@ public class RoomCreator : MonoBehaviour
                     }
 
 
-                }
-                else
-                {
-                    //print(new string("ROOM IN THE WAY!! " + roomOrder + " ExitDoor:" + i));
                 }
             }
         }
