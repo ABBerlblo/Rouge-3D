@@ -7,6 +7,7 @@ public class CollisionDetection : MonoBehaviour
 {
     public WeaponController wc;
     public GameObject hitParticle;
+    public int weaponDmg;
 
     private void Update()
     {
@@ -21,6 +22,7 @@ public class CollisionDetection : MonoBehaviour
     {
         if (other.tag == "Enemy" && wc.isAttacking)
         {
+            
             other.GetComponent<Animator>().SetTrigger("Hit");
             Instantiate(hitParticle, new Vector3(other.transform.position.x, transform.position.y, other.transform.position.z), other.transform.rotation);
         }
