@@ -12,6 +12,7 @@ public class PlayerStats: MonoBehaviour
     public int amountOfCoins = 100;
     public int attackDmg;
     public int increaseCoinsAmount;
+    public float maxHealth = 100f;
 
     // Start is called before the first frame update
     void Start()
@@ -44,12 +45,18 @@ public class PlayerStats: MonoBehaviour
             health += attackDmg;
         }
 
+
         if (health < 0)
         {
             health = 0;
         }
-        coin.text = amountOfCoins.ToString();
-        healthbar.text = health.ToString();
+
+        if (health > maxHealth)
+        {
+            health = maxHealth;
+        }
+        coin.text = "Coin: " + amountOfCoins.ToString();
+        healthbar.text = "Health: " + health.ToString() + "/" + maxHealth.ToString();
     }
 
     private void OnTriggerStay(Collider other)
