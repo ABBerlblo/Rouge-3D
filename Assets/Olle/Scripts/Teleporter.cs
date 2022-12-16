@@ -25,11 +25,21 @@ public class Teleporter : MonoBehaviour
         {
             print("Colition sucessfull");
             player.GetComponent<PlayerStats>().amountOfCoins -= 100;
+            player.transform.position = new Vector3(0, 2, 0);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+
             print("Colition tp: " + player.transform.position);
-            GameObject.Find("FirstPersonPlayer").transform.position = new Vector3(0, 2, 0);
             player.transform.eulerAngles = new Vector3(0, 0, 0);
+            player.transform.position = new Vector3(0, 2, 0);
             print("Colition tp: " + player.transform.position);
+
+
+
+
+            //GameObject player = GameObject.Find("FirstPersonPlayer");
+            //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //        player.transform.position = new Vector3(0, 2, 0);
+            //        player.transform.eulerAngles = new Vector3(0,0,0);
         }
     }
 }
