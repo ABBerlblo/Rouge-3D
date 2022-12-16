@@ -7,7 +7,7 @@ public class addCoins : MonoBehaviour
     PlayerStats playerStats;
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if(other.gameObject.tag == "Coins")
         {
             playerStats.amountOfCoins += 10;
         }
