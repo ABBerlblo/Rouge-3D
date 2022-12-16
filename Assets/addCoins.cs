@@ -10,6 +10,7 @@ public class addCoins : MonoBehaviour
         if(other.gameObject.tag == "Coins")
         {
             playerStats.amountOfCoins += 10;
+            Destroy(other.gameObject);
            
         }
     }

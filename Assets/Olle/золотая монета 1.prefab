@@ -112,12 +112,11 @@ GameObject:
   - component: {fileID: 2052079837704941590}
   - component: {fileID: 3148684817557552539}
   - component: {fileID: 8324506131279146014}
-  - component: {fileID: 2125676728246734761}
   - component: {fileID: 1262824327923171003}
   m_Layer: 0
   m_Name: "\u0437\u043E\u043B\u043E\u0442\u0430\u044F \u043C\u043E\u043D\u0435\u0442\u0430
     (3)"
-  m_TagString: Coins
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -187,18 +186,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2125676728246734761
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3052897698355159894}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ca67846725e934aa95ce1bb43e445e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &1262824327923171003
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -223,12 +210,11 @@ GameObject:
   - component: {fileID: 15640904787196542}
   - component: {fileID: 3033335044570892467}
   - component: {fileID: 7270489815742053535}
-  - component: {fileID: 1441530488280497076}
   - component: {fileID: 2687421750437785957}
   m_Layer: 0
   m_Name: "\u0437\u043E\u043B\u043E\u0442\u0430\u044F \u043C\u043E\u043D\u0435\u0442\u0430
     (2)"
-  m_TagString: Coins
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -298,18 +284,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &1441530488280497076
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5292235362771560839}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ca67846725e934aa95ce1bb43e445e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &2687421750437785957
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -334,12 +308,11 @@ GameObject:
   - component: {fileID: 3548185372178316918}
   - component: {fileID: 5999957660762339605}
   - component: {fileID: 5836934176229142445}
-  - component: {fileID: 4990658503818571547}
   - component: {fileID: 7318490811097571142}
   m_Layer: 0
   m_Name: "\u0437\u043E\u043B\u043E\u0442\u0430\u044F \u043C\u043E\u043D\u0435\u0442\u0430
     (1)"
-  m_TagString: Coins
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -409,18 +382,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4990658503818571547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8454652719602968478}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f8ca67846725e934aa95ce1bb43e445e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!65 &7318490811097571142
 BoxCollider:
   m_ObjectHideFlags: 0
