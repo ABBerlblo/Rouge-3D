@@ -12,6 +12,5 @@ public class addCoins : MonoBehaviour
             playerStats.amountOfCoins += 10;
            
         }
-        Debug.Log("plus 10" + playerStats.amountOfCoins);
     }
 }
