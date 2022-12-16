@@ -29,8 +29,7 @@ public class Teleporter : MonoBehaviour
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
 
             print("Colition tp: " + player.transform.position);
-            player.transform.eulerAngles = new Vector3(0, 0, 0);
-            player.transform.position = new Vector3(0, 2, 0);
+            //player.transform.eulerAngles = new Vector3(0, 0, 0);
             print("Colition tp: " + player.transform.position);
 
 
