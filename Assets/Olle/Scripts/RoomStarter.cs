@@ -36,18 +36,19 @@ public class RoomStarter : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKeyUp("r"))
-        {//reload scene, for testing purposes
-            Object player = GameObject.Find("FirstPersonPlayer");
-            print("Coin "+player.GetComponent<PlayerStats>().amountOfCoins);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-            //SceneManager.MoveGameObjectToScene(player.GameObject(), SceneManager.GetActiveScene());
-            //GameObject newPlayer = ;
-            //print("Coin "+newPlayer.GetComponent<PlayerStats>().amountOfCoins);
-        }
-    }
+    //void Update()
+    //{
+    //    if (Input.GetKeyUp("r"))
+    //    {//reload scene, for testing purposes
+    //        GameObject player = GameObject.Find("FirstPersonPlayer");
+    //        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    //        player.transform.position = new Vector3(0, 2, 0);
+    //        player.transform.eulerAngles = new Vector3(0,0,0);
+    //        //SceneManager.MoveGameObjectToScene(player.GameObject(), SceneManager.GetActiveScene());
+    //        //GameObject newPlayer = ;
+    //        //print("Coin "+newPlayer.GetComponent<PlayerStats>().amountOfCoins);
+    //    }
+    //}
     void GenerateLevel()
     {
         Object[] startRooms = Resources.LoadAll("Start Rooms", typeof(GameObject));
