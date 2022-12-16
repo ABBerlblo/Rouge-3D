@@ -355,7 +355,7 @@ GameObject:
   - component: {fileID: 2152328645031132003}
   m_Layer: 0
   m_Name: FirstPersonPlayer
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -438,6 +438,7 @@ MonoBehaviour:
   amountOfCoins: 100
   attackDmg: 0
   increaseCoinsAmount: 0
+  maxHealth: 100
 --- !u!1 &143738040417115371
 GameObject:
   m_ObjectHideFlags: 0

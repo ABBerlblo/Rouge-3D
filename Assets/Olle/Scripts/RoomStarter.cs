@@ -38,9 +38,14 @@ public class RoomStarter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("r"))
+        if (Input.GetKeyUp("r"))
         {//reload scene, for testing purposes
+            Object player = GameObject.Find("FirstPersonPlayer");
+            print("Coin "+player.GetComponent<PlayerStats>().amountOfCoins);
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            //SceneManager.MoveGameObjectToScene(player.GameObject(), SceneManager.GetActiveScene());
+            //GameObject newPlayer = ;
+            //print("Coin "+newPlayer.GetComponent<PlayerStats>().amountOfCoins);
         }
     }
     void GenerateLevel()
