@@ -10,7 +10,8 @@ public class addCoins : MonoBehaviour
         if(other.gameObject.tag == "Coins")
         {
             playerStats.amountOfCoins += 10;
-            Debug.Log("plus 10" + playerStats.amountOfCoins);
+           
         }
+        Debug.Log("plus 10" + playerStats.amountOfCoins);
     }
 }
