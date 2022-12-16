@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Teleporter : MonoBehaviour
 {
@@ -14,5 +16,20 @@ public class Teleporter : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        GameObject player = GameObject.Find("FirstPersonPlayer");
+        print("Colition happened");
+        if (other.gameObject.name == "FirstPersonPlayer" && player.GetComponent<PlayerStats>().amountOfCoins >= 100)
+        {
+            print("Colition sucessfull");
+            player.GetComponent<PlayerStats>().amountOfCoins -= 100;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            print("Colition tp: " + player.transform.position);
+            GameObject.Find("FirstPersonPlayer").transform.position = new Vector3(0, 2, 0);
+            player.transform.eulerAngles = new Vector3(0, 0, 0);
+            print("Colition tp: " + player.transform.position);
+        }
     }
 }
